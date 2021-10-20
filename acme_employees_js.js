@@ -67,19 +67,18 @@ spacer('');
 
 //DONE@@@@@@@@@@@ Function 4: findManagementChainForEmployee
 function findManagementChainForEmployee(name, arr) {
-   
-        let reportArr=[]
+        let arr2;
    if (name.hasOwnProperty('managerId'))  {
-     let reportTree=name.name
-     //let arrTest=(findManagerFor(findEmployeeByName(reportTree, arr), arr));
-       //findManagerFor(name, arr);
-  
-       //reportArr= (findManagerFor(name, arr));
-       //return reportArr.find(x => x.name);
-       //return reportArr
-       //return findManagementChainForEmployee(findManagerFor(name, arr), arr);
-    }
+      //find name of manager (recurse)
+    
+      return findManagerFor(name,arr)
+        console.log('hello this is first guy shep jr: '+ name.name);
+        console.log('hello this is 2nd guy shep : '); console.log(findManagerFor(name,arr));
+        console.log('hello this is the 3rd guy: ' ); console.log(arr2.filter(name => name.name));
+        console.log()
 
+        
+    }
         else {
             return [];
            }
@@ -87,13 +86,7 @@ function findManagementChainForEmployee(name, arr) {
     }
 
      
-     
-        
-
-      
-   
-
-   
+ 
 
 
 spacer('findManagementChain for shep Jr.')
